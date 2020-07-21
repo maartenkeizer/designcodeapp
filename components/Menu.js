@@ -63,6 +63,7 @@ class Menu extends React.Component {
                 </Cover>
                 <TouchableOpacity
                     onPress={this.props.closeMenu}
+                    activeOpacity={0.9}
                     style={{
                         position: "absolute",
                         top: 120,

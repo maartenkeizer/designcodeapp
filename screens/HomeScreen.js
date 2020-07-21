@@ -90,7 +90,11 @@ class HomeScreen extends React.Component {
           <SafeAreaView>
             <ScrollView style={{ height: "100%" }}>
               <TitleBar>
-                <TouchableOpacity onPress={this.props.openMenu} style={{ position: "absolute" }}>
+                <TouchableOpacity
+                  onPress={this.props.openMenu}
+                  activeOpacity={0.5}
+                  style={{ position: "absolute" }}
+                >
                   <Avatar />
                 </TouchableOpacity>
                 <Title>Welcome back,</Title>
@@ -125,6 +129,7 @@ class HomeScreen extends React.Component {
                 {cards.map((card, index) => (
                   <TouchableOpacity
                     key={index}
+                    activeOpacity={0.8}
                     onPress={() => {
                       this.props.navigation.push("Section");
                     }}
