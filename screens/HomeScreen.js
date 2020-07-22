@@ -131,7 +131,9 @@ class HomeScreen extends React.Component {
                     key={index}
                     activeOpacity={0.8}
                     onPress={() => {
-                      this.props.navigation.push("Section");
+                      this.props.navigation.push("Section", {
+                        section: card
+                      });
                     }}
                   >
                     <Card
